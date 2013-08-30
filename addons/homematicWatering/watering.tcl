@@ -10,6 +10,9 @@ source config.tcl
 # Zahl Wetter-Regen-Heute
 # Zahl Wetter-Regen-Morgen
 # Zahl Wetter-Regen-Uebermorgen
+# Zahl Wetter-MaxTemperatur-Heute
+# Zahl Wetter-MaxTemperatur-Morgen
+# Zahl Wetter-MaxTemperatur-Uebermorgen
 # Zahl Giessen
 # Zahl Giessen-Temperatur-Abhaengig
 
@@ -91,14 +94,20 @@ set rega_cmd ""
 append rega_cmd "var w0 = dom.GetObject('Wetter-Regen-Heute');"
 append rega_cmd "var w1 = dom.GetObject('Wetter-Regen-Morgen');"
 append rega_cmd "var w2 = dom.GetObject('Wetter-Regen-Uebermorgen');"
-append rega_cmd "var w3 = dom.GetObject('Giessen');"
-append rega_cmd "var w4 = dom.GetObject('Giessen-Temperatur-Abhaengig');"
+append rega_cmd "var w3 = dom.GetObject('Wetter-MaxTemperatur-Heute');"
+append rega_cmd "var w4 = dom.GetObject('Wetter-MaxTemperatur-Morgen');"
+append rega_cmd "var w5 = dom.GetObject('Wetter-MaxTemperatur-Uebermorgen');"
+append rega_cmd "var w6 = dom.GetObject('Giessen');"
+append rega_cmd "var w7 = dom.GetObject('Giessen-Temperatur-Abhaengig');"
 
 append rega_cmd "w0.State('$tag0regen');"
 append rega_cmd "w1.State('$tag1regen');"
 append rega_cmd "w2.State('$tag2regen');"
-append rega_cmd "w3.State('$bewaessern');"    
-append rega_cmd "w4.State('$ErgDauer');"    
+append rega_cmd "w3.State('$maxtemp0');"
+append rega_cmd "w4.State('$maxtemp1');"
+append rega_cmd "w5.State('$maxtemp2');"
+append rega_cmd "w6.State('$bewaessern');"
+append rega_cmd "w7.State('$ErgDauer');"
 
 
 rega_script $rega_cmd
