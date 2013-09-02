@@ -91,12 +91,12 @@ set ErgDauer [expr {($bewaessernsum / (((20 / $tempfaktor) * $sumFaktor)* $Dauer
 # set ReGaHss variables
 #
 set rega_cmd ""
-append rega_cmd "dom.GetObject('Wetter-Regen-Heute').State('$tag0regen');"
-append rega_cmd "dom.GetObject('Wetter-Regen-Morgen').State('$tag1regen');"
-append rega_cmd "dom.GetObject('Wetter-Regen-Uebermorgen').State('$tag2regen');"
-append rega_cmd "vdom.GetObject('Wetter-MaxTemperatur-Heute').State('$maxtemp0');"
-append rega_cmd "dom.GetObject('Wetter-MaxTemperatur-Morgen').State('$maxtemp1');"
-append rega_cmd "dom.GetObject('Wetter-MaxTemperatur-Uebermorgen').State('$maxtemp2');"
+#append rega_cmd "dom.GetObject('Wetter-Regen-Heute').State('$tag0regen');"
+#append rega_cmd "dom.GetObject('Wetter-Regen-Morgen').State('$tag1regen');"
+#append rega_cmd "dom.GetObject('Wetter-Regen-Uebermorgen').State('$tag2regen');"
+#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Heute').State('$maxtemp0');"
+#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Morgen').State('$maxtemp1');"
+#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Uebermorgen').State('$maxtemp2');"
 append rega_cmd "dom.GetObject('Giessen').State('$bewaessern');"
 append rega_cmd "dom.GetObject('Giessen-Temperatur-Abhaengig').State('$ErgDauer');"
 rega_script $rega_cmd
