@@ -7,20 +7,8 @@ load tclrega.so
 source config.tcl
 
 # Systemvariablen:
-# Zahl Wetter-Regen-Heute
-# Zahl Wetter-Regen-Morgen
-# Zahl Wetter-Regen-Uebermorgen
-# Zahl Wetter-MaxTemperatur-Heute
-# Zahl Wetter-MaxTemperatur-Morgen
-# Zahl Wetter-MaxTemperatur-Uebermorgen
 # Zahl Giessen
 # Zahl Giessen-Temperatur-Abhaengig
-
-set Dauer 10;
-set MaxTemp 10.00;
-set Faktor1 3;
-set Faktor2 2;
-set Faktor3 1;
 
 # Aufruf und Erstellung der xml
 
@@ -91,12 +79,6 @@ set ErgDauer [expr {($bewaessernsum / (((20 / $tempfaktor) * $sumFaktor)* $Dauer
 # set ReGaHss variables
 #
 set rega_cmd ""
-#append rega_cmd "dom.GetObject('Wetter-Regen-Heute').State('$tag0regen');"
-#append rega_cmd "dom.GetObject('Wetter-Regen-Morgen').State('$tag1regen');"
-#append rega_cmd "dom.GetObject('Wetter-Regen-Uebermorgen').State('$tag2regen');"
-#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Heute').State('$maxtemp0');"
-#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Morgen').State('$maxtemp1');"
-#append rega_cmd "dom.GetObject('Wetter-MaxTemp-Uebermorgen').State('$maxtemp2');"
 append rega_cmd "dom.GetObject('Giessen').State('$bewaessern');"
 append rega_cmd "dom.GetObject('Giessen-Temperatur-Abhaengig').State('$ErgDauer');"
 rega_script $rega_cmd
