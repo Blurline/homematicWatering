@@ -73,15 +73,14 @@ Faktor3              |1        |Übermorgen
 Diese Programm berechnet aufgrund verschiedener Faktoren die Bewässerungsdauer.
 
 Beispielbedingungen aus wunderground.com
-
-Heute 10% Regenwahrscheinlichkeit
-Morgen 10% Regenwahrscheinlichkeit
-Übermorgen 60% Regenwahrscheinlichkeit
+*   Heute 10% Regenwahrscheinlichkeit
+*   Morgen 10% Regenwahrscheinlichkeit
+*   Übermorgen 60% Regenwahrscheinlichkeit
 
 Priorität:
-Heute Faktor = 3
-Morgen Faktor = 2
-Übermorgen Faktor = 1
+*   Heute Faktor = 3
+*   Morgen Faktor = 2
+*   Übermorgen Faktor = 1
 
 Ich rechne wie folgt
 
@@ -99,7 +98,6 @@ Bedeutet, da es Heute und Morgen wahrscheinlich nicht regnet und erst am Übermo
 
 Diese Formel ist meine Grundlage um erstmal überhaupt eine etwas logische Automatisierung hinzu bekommen.
 
-Hat jemand Verbesserungsvorschläge? Andere Erfahrungen. Bin für jeden Tipp offen.
 
 Anschließend wird ein Script erstellt, welches den Werte Bereich der Systemvariabel "Giessen" abfragt und zu einem festen Zeitpunkt den Aktor einschaltet.
 
