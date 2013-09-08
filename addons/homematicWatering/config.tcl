@@ -1,13 +1,13 @@
 #!/bin/tclsh
 
 # wundergroung API Key
-set key 2b2f838faecd9466
+set key xxxx
 
 # Weather Location for API calls
 set ort arnsberg
 
 
-set Dauer 10;
+set Dauer 10.00;
 set MaxTemp 10.00;
 set Faktor1 3;
 set Faktor2 2;
