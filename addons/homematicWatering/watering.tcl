@@ -8,7 +8,11 @@ source conf/config.tcl
 
 # Aufruf und Erstellung der xml
 set url http://api.wunderground.com/api/$key/forecast/lang:DL/q/Germany/$ort.xml
-exec /usr/bin/wget -q -O watering.xml $url
+
+if { [catch {exec /usr/bin/wget -q -O watering.xml $url} error] } {
+    puts stderr "Could not reach $url \n$error"
+    exit 1
+}
 
 set f [open "watering.xml"]
 set input [read $f]
