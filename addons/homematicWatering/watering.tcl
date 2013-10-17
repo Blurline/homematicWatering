@@ -6,12 +6,7 @@ load tclrega.so
 # include config
 source conf/config.tcl
 
-# Systemvariablen:
-# Zahl Giessen
-# Zahl Giessen-Temperatur-Abhaengig
-
 # Aufruf und Erstellung der xml
-
 set url http://api.wunderground.com/api/$key/forecast/lang:DL/q/Germany/$ort.xml
 exec /usr/bin/wget -q -O watering.xml $url
 
@@ -74,11 +69,9 @@ set tempfaktor [expr {(($Faktor1 * (($maxtemp0 - $MaxTemp) / 10)) + ($Faktor2 * 
 # Formel: ( (Regenwahrscheinlichkeit mit Faktor berechnen) / ( 20 /Temperatur Faktor berechnen) * (Summe Faktoren) ) ) * MaxDauer Faktor 
 set ErgDauer [expr {($bewaessernsum / (((20 / $tempfaktor) * $sumFaktor)* $DauerFaktor))}];
 
-
-#
-# set ReGaHss variables
-#
 set rega_cmd ""
 append rega_cmd "dom.GetObject('Giessen').State('$bewaessern');"
 append rega_cmd "dom.GetObject('Giessen-Temperatur-Abhaengig').State('$ErgDauer');"
 rega_script $rega_cmd
+
+exit 0;
