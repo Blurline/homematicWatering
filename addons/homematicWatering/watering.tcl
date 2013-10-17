@@ -4,7 +4,7 @@
 load tclrega.so
 
 # include config
-source config.tcl
+source conf/config.tcl
 
 # Systemvariablen:
 # Zahl Giessen
